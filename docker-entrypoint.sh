@@ -22,6 +22,3 @@ fi
 # 启动应用
 echo "启动Linkwarden..."
 yarn start
-
-
-ref(APA): 7thLiane.Qiyuelianï¿½s blog.https://qyl.lovestoblog.com. Retrieved 2025/3/6.
