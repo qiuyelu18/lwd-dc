@@ -64,6 +64,3 @@ EXPOSE 3000
  
 # 设置入口点
 ENTRYPOINT ["/docker-entrypoint.sh"]
-
-
-ref(APA): 7thLiane.Qiyuelianï¿½s blog.https://qyl.lovestoblog.com. Retrieved 2025/3/6.
