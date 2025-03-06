@@ -1,0 +1,26 @@
+version: "3.5"
+services:
+  postgres:
+    image: postgres:16-alpine
+    env_file: .env
+    restart: always
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+  linkwarden:
+    build: .
+    env_file: .env
+    environment:
+      - DATABASE_URL=postgresql://postgres:${POSTGRES_PASSWORD}@postgres:5432/postgres
+      - HF_TOKEN=${HF_TOKEN}
+      - DATASET_ID=${DATASET_ID}
+      - SYNC_INTERVAL=${SYNC_INTERVAL:-7200}
+    restart: always
+    ports:
+      - 3000:3000
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      - postgres
+
+
+ref(APA): 7thLiane.Qiyuelianï¿½s blog.https://qyl.lovestoblog.com. Retrieved 2025/3/6.
